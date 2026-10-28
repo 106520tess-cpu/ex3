@@ -95,6 +95,37 @@ nav a:hover{
     color: rgba(87, 117, 144, 1);
 }
 
+/*marquee*/
+.marquee{
+    width: 100%;
+    overflow: hidden; /*填滿畫面*/
+    background: rgba(251, 139, 36, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 20px 0; /*跑馬燈背景要多厚*/
+}
+
+.marquee-track{
+    display: flex;
+    width: max-content; /*讓移動區域依內容寬度延伸*/
+    animation: marquee 10s linear infinite;/*CSS動畫設定*/ /*動畫名稱 動畫持續時間 動畫速度 動畫循環*/
+}
+
+@keyframes marquee{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-content{
+    flex-shrink: 0;
+    padding-right: 0px;
+    white-space: nowrap;
+    font-size: max(1.5rem, 1vw); 
+}
+
 /*section*/
 section{
     display:flex;
